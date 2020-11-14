@@ -45,6 +45,7 @@ class MyAds extends React.Component {
 
         console.log(list)
         return (
+            
             <>
                 {isLogedIn ?
                     <div className='myads'>
