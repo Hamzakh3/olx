@@ -1,0 +1,398 @@
+
+.postForm {
+    width: 50vw;
+    margin: 5px auto;
+}
+
+.postForm h1 {
+    text-align: center;
+    padding: 10px 0px;
+}
+
+.postForm h2 {
+    font-size: 21px;
+}
+
+.form {
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 4px;
+}
+
+.form label {
+    font-size: 15px;
+    font-weight: lighter;
+    color: rgb(68, 68, 68);
+}
+
+.form input, .form select, .form textarea {
+    display: block;
+    width: 25vw;
+    padding: 15px;
+    border-radius: 4px;
+    border-style: solid;
+    font-size: 15px;
+}
+
+.form input:hover, .form select:hover, .form textarea:hover {
+    border-color: rgb(0, 47, 42);
+}
+
+.form textarea {
+    padding: 7px !important;
+    resize: none;
+}
+
+.form .info {
+    font-size: 11px;
+    color: rgb(68, 68, 68);
+}
+
+.selectedCategory, .includeSomeDetails, .setAPrice, .uploadPhotos, .confirmLocation, .reviewDetails, .postNow, .categories {
+    padding: 5px 30px;
+}
+
+.chooseCategories{
+    padding: 0px !important;
+    
+}
+.chooseCategories li{
+    font-size: 20px !important;
+    list-style: none;
+    border: 1px solid rgb(200, 200, 200) !important;
+    max-width: 220px !important;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.chooseCategories li:hover{
+ background-color: rgb(243, 243, 243) !important;
+ padding: 6px 12px;
+ transition: all 0.1s ease-in;
+}
+.chooseCategories li i{
+    margin-right:15px ;
+}
+.selectedCategory {
+    margin: 15px 0px;
+}
+
+.selectedCategory small {
+    display: inline-block;
+    margin-top: 10px !important;
+}
+
+.changeCateg {
+    padding-left: 40px !important;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.changeCateg:hover {
+    color: rgb(0, 47, 42);
+    font-weight: 800;
+}
+
+.includeSomeDetails div {
+    margin: 14px 0px;
+}
+
+.radioSelection {
+    display: inline-block;
+    border: 1px solid rgb(0, 47, 42);
+    padding: 6px 5px;
+    font-size: 15px;
+    border-radius: 4px;
+    color: rgb(0, 47, 42);
+    font-weight: lighter;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.radioSelection:hover {
+    background-color: rgb(0, 47, 42);
+    color: whitesmoke;
+    transition: all 0.1s ease-in;
+}
+
+.radioSelection.active {
+    background-color: rgb(0, 47, 42);
+    color: whitesmoke;
+}
+
+.setAPrice div {
+    margin: 14px 0px;
+}
+
+.uploadPhotos .photos{
+    width: 378px;
+    margin: 35px 0px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+.uploadPhotos .photos div{
+    margin: 1px 3px;
+}
+.uploadPhotos .photos div span{
+    background-color: rgb(207, 207, 207);
+}
+
+.uploadPhotos .photos input{
+    width: 0px;
+    height: 0px;
+    padding: 0px;
+    margin: 0px;
+}
+.attachFileSpan {
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    width: 120px !important;
+    height: 120px !important;
+    text-align: justify;
+    cursor: pointer;
+    border: 1px solid rgb(0, 47, 42);
+    color: rgb(68, 68, 68);
+    overflow-x: hidden;
+}
+.imageList{
+    padding: 4px 8px;
+    font-size: 14px;
+    color: rgb(0, 104, 0);
+    background-color: rgb(202, 245, 202);
+    border-radius: 5px;
+    cursor: pointer;
+}
+.imageList:hover{
+    color: rgb(119, 0, 0);
+    background-color: rgb(245, 202, 202);
+    text-decoration: line-through !important;
+}
+.imageList i{
+    margin-right: 12px;
+    padding: 2px 3px !important;
+}
+
+
+.imagesName li{
+    list-style: none;
+    margin-top: 2px;
+    margin-bottom: 2px;
+
+}
+.addPhoto{
+    color: rgb(0, 47, 42) !important;
+    font-size: 12px;
+    font-weight: lighter;
+}
+.addPhoto:hover{
+    color: rgb(247,248,249) !important;
+}
+
+.attachFileSpan:hover {
+    background: linear-gradient(to left top,rgb(58,119,255) 30%, rgb(255,206,50) 70%, rgb(35,229,219) 0% ) !important;
+    color: whitesmoke;
+    transition: all 0.1s ease-in-out;
+}
+.confirmLocation div{
+    margin: 14px auto;
+}
+.userReview{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.userReview img{
+    border-radius: 100%;
+    background-color: rgb(200, 200, 200);
+    padding: 5px;
+    margin-right: 10px;
+}
+.firstSecond{
+    margin-top:20px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    font-size: 17px;
+    font-weight: 600;
+    width: 40vw;
+
+}
+.firstLeft{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 4px 0px;
+}
+
+.secondRight{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin: 4px 0px;
+}
+.userReview{
+    margin:14px 0px;
+}
+.post{
+    padding:13px 30px;
+    background-color: rgb(0, 47, 42);
+    color: rgb(247,248,249);
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    border:3px solid rgb(0, 47, 42);
+    cursor: pointer;
+}
+.post:hover{
+    border:3px solid rgb(0, 47, 42);
+    background-color: rgb(247,248,249);
+    color: rgb(0, 47, 42);
+    font-weight: 600;
+    transition: all 0.2s ease-in-out;
+
+}
+.disableBtn{
+    background-color: rgb(165, 165, 165) !important;
+    color: rgb(233, 233, 233) !important;
+    border: 2px solid transparent !important;
+    border-radius: 4px !important;
+    padding: 10px 30px !important;
+    cursor: not-allowed;
+}
+.disableBtn:hover{
+    background-color: rgb(165, 165, 165) !important;
+    color: rgb(233, 233, 233);
+    border: 2px solid transparent;
+    border-radius: 4px;
+    padding: 10px 30px;
+    cursor: not-allowed;
+}
+.postNow{
+    margin:14px 0px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    justify-content: flex-start;
+}
+.hide{
+    color: rgb(168, 168, 168) !important;
+    text-decoration: line-through;
+}
+.showNumber{
+    position: relative;
+    width: 36px;
+    height: 10px;
+    background-color: rgb(173, 173, 173);
+    border-radius: 5px;
+    cursor: pointer !important;
+}
+.yes{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right:14px;
+    top:-6px;
+    border: 4px solid rgb(0, 204, 27);
+    border-radius: 100%;
+    background-color: rgb(160, 255, 173);
+    transition: all 0.2s ease-in-out;
+}
+.no{
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left:14px;
+    top:-6px;
+    border: 4px solid rgb(167, 167, 167);
+    border-radius: 100%;
+    background-color: rgb(241, 241, 241);
+    transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width:1300px){
+    .postForm {
+        width: 80vw;
+        margin: 5px auto;
+    }
+
+    .form input, .form select, .form textarea {
+        display: block;
+        width: 40vw;
+        padding: 15px;
+        border-radius: 4px;
+        border-style: solid;
+        font-size: 15px;
+        cursor: pointer !important;
+    }
+    .firstSecond{
+        margin-top:20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        font-size: 18px;
+        font-weight: 600;
+        width: 100%;
+    
+    }    
+}
+@media screen and (max-width:850px){
+    .postForm {
+        width: 96vw;
+        margin: 5px auto;
+    }
+    .uploadPhotos .photos{
+        width: 252px;
+        margin: 35px 0px;
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+    
+    }
+    .form input, .form select, .form textarea {
+        display: block;
+        width: 100%;
+        padding: 15px;
+        border-radius: 4px;
+        border-style: solid;
+        font-size: 15px;
+    }
+    .firstSecond{
+        margin-top:20px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        font-size: 15px;
+        font-weight: 600;
+        width: 100%;
+    
+    }    
+}
+
+.loader {
+    margin-left: 10px !important; 
+    border: 8px solid rgb(221, 243, 241);
+    border-radius: 50%;
+    border-top: 6px solid rgb(0, 47, 42);
+    width: 18px;
+    height: 18px;
+    -webkit-animation: spin 1s linear infinite; /* Safari */
+    animation: spin 1s linear infinite;
+  }
+  
+  /* Safari */
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }

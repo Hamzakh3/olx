@@ -1,0 +1,168 @@
+.myads{
+
+    display: flex !important;
+    justify-content: center !important; 
+    align-items: center !important;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+.myads h2{
+    color: rgb(0,42,46);
+    background-color: rgb(185, 250, 255);
+    padding:10px 20px;
+    border-radius: 5px;
+}
+.myads h3{
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(0,42,46);
+}
+.settingUserPass{
+    border: 1px solid rgb(179, 179, 179) !important; 
+    width: 55vw !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 5px;
+    margin: 20px 0px;   
+}
+.settingUserPass div{
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+
+}
+.settingUserPass div input{
+    width: 90%;
+    padding: 10px;
+}
+.settingUserPass div label{
+    width: 93%;
+    color: rgb(0,42,46);
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 5px 0px;
+}
+.settingUserPass div small{
+    width: 93%;
+    color: rgb(0,42,46);
+    font-size: 0.8rem;
+    padding: 5px 0px;
+}
+.settingUserPass div button{
+    width: 20%;
+    background-color: rgb(0,42,46);
+    color: white;
+    outline: none;
+    border-radius: 2px;
+    border: 2px solid rgb(0,42,46);
+    font-size: 1.2rem;
+    font-weight: 500;
+    padding: 5px 0px;
+    cursor: pointer;
+}
+.settingUserPass div button:hover{
+    background-color: whitesmoke;
+    color: rgb(0,42,46);
+    transition: all 0.2s ease-in-out;
+}
+.settingUserProfile{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 90px;
+}
+.settingUserProfile .userNameImage{
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100%;
+    font-size: 2.8em;
+    border: 2px solid white ;
+    color: white;
+    background-color: rgb(0,42,46);
+    cursor: pointer;
+}
+.settingUserProfile p{
+    font-size: 2rem;
+    margin-left: 20px;
+    color: rgb(0,42,46);
+    font-weight: 600;
+}
+.settingUserProfile input{
+    font-size: 1.2rem;
+    /* margin-left: 20px; */
+    padding:5px 8px;
+    color: rgb(0,42,46);
+    /* font-weight: 600; */
+}
+.settingUserProfile p div{
+    font-size: 0.7rem;
+    line-height: 0.7rem;
+    padding-left: 2px;
+}
+.settingUserProfile button{
+    font-size: 1rem;
+    color: rgb(0,42,46);
+    font-weight:500;
+    background-color: white;
+    border: 1px solid rgb(0,42,46);
+    cursor: pointer;
+    padding: 7px 10px;
+    /* margin: 0px 3px 0px auto; */
+    border-radius: 3px;
+
+}
+.settingUserProfile .btnEdit{
+    margin: 0px 3px 0px auto !important;
+
+}
+.settingUserProfile .btnCancel{
+    margin: 0px 3px 0px auto !important;
+
+}
+.settingUserProfile button:hover{
+    border: 2px solid rgb(0,42,46);
+    font-weight:600;
+    transition: all 0.1s ease-in-out;
+
+    
+}
+.editMode{
+    display:flex;
+    flex-direction: column;
+    margin-left: 20px;
+
+}
+.changePassBtnDisable{
+    background-color: rgb(34, 64, 66) !important;
+    color: whitesmoke !important;
+    cursor: not-allowed !important;
+}
+.changeNameBtnDisbale{
+    border:1px solid rgb(34, 64, 66) !important;
+    color: rgb(34, 64, 66) !important;
+    cursor: not-allowed !important;
+    font-weight: 100 !important;
+}
+/* .topEndAlert{
+    width: 100px !important;
+} */
+@media Screen and (max-width:868px){
+
+   
+    .settingUserPass{
+        width: 90vw !important; 
+        margin: 10px 0px;       
+    }
+    .settingUserProfile img{
+        width: 65px;
+        height: 65px;
+        border-radius: 100%;
+    }
+    
+}

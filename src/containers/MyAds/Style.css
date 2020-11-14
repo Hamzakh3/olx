@@ -1,0 +1,204 @@
+.myads{
+
+    display: flex !important;
+    justify-content: center !important; 
+    align-items: center !important;
+    flex-direction: column;
+    padding: 20px 0px;
+}
+.myads h2{
+    color: rgb(0,42,46);
+    background-color: rgb(185, 250, 255);
+    padding:10px 20px;
+    border-radius: 5px;
+}
+.myads h3{
+    padding-bottom: 10px;
+    border-bottom: 3px solid rgb(0,42,46);
+}
+.myadsList{
+    border: 1px solid rgb(179, 179, 179) !important; 
+    width: 70vw !important;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 101px !important;
+    box-shadow: 2px 2px 4px rgb(212, 212, 212);
+    border-radius: 5px;
+    margin: 20px 0px;
+    cursor: pointer;
+    
+
+}
+.myadsList:hover{
+    background-color: rgb(250, 250, 250);
+    /* width: 7vw !important; */
+    transition: all 0.2s ease-in-out;
+    box-shadow: 3px 3px 8px rgb(196, 196, 196);
+
+}
+
+.myadsPostDetail hr{
+    width: 100%;
+    margin: 0px;
+    
+}
+.postTime{
+    /* padding: 3px; */
+    background-color: rgb(235, 235, 235);
+    height: inherit;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.9rem;
+    min-width: 130px !important;    
+    border-left: 3px inset rgb(23, 255, 23);
+
+}
+
+.postTime p{
+    padding: 4px;
+}
+.myadsPostDetail{
+    display: flex;
+    flex-direction: column;
+    /* padding: 5px !important; */
+    width: 100%;
+    margin: 0px 5px;
+}
+.detailArea{
+    display: flex;
+    justify-content: flex-start;
+    /* flex-direction: row; */
+    align-items: center;
+    position: relative;
+}
+.removeAdList{
+    position: absolute;
+    padding: 5px 25px;
+    font-size: 0.9rem;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgb(211, 252, 255);
+    color: rgb(0,42,46);
+    top: -3px;
+    right: 30px;
+}
+.removeAdList:hover{
+    background-color: rgb(185, 250, 255);
+
+}
+.detailArea img{
+    border-radius: 6px;
+}
+.detailArea i{
+    /* margin-left: auto; */
+    margin-right: 5px;
+    cursor: pointer;
+    padding: 5px 8px;
+}
+.detailArea i:hover{
+    background-color: rgb(211, 252, 255);
+    border-radius: 100%;
+    
+}
+.detailArea .imageTitle{
+    margin: 0px 10px 0px 20px;
+    cursor: pointer;
+}
+.detailArea .imagePrice{
+    margin-left: auto;
+    margin-right: 10px;
+}
+.detailArea .imageTitle:hover{
+text-decoration: underline;
+
+}
+.myadsPostFooter{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+.myadsPostFooter button{
+    margin-left: auto;
+    margin-right: 5px;
+    border:1px solid rgb(0,42,46) ;
+    background-color: white ;
+    color: rgb(0,42,46) ;
+    padding: 4px 8px ;
+    border-radius: 2px;
+    cursor: pointer;
+}
+.myadsPostFooter button:hover{
+    border:3px inset rgb(0,42,46) ;
+}
+.myadsPostFooter p{
+    padding: 0px 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.confirm{
+    padding: 10px 20px !important;
+    background-color: rgb(0,42,46);
+    color: white;
+    font-weight: 600;
+    border: 1px solid rgb(0,42,46);
+    outline: none;
+    margin-left: 2px !important;
+    cursor: pointer;
+}
+.confirm:hover{
+    background-color: rgb(24, 55, 58);
+
+}
+.cancel{
+    outline: none;
+    padding: 10px 20px !important ;
+    color: rgb(0,42,46);
+    font-weight: 600;
+    border: 1px solid rgb(0,42,46);
+    cursor: pointer;
+
+}
+.cancel:hover{
+    background-color: rgb(232, 253, 255);
+
+}
+@media Screen and (max-width:868px){
+
+   
+    .myadsList{
+        width: 98vw !important; 
+        margin: 10px 0px;       
+    }
+    .myadsList:hover{
+        width: 98vw !important;
+
+    }
+    .postTime{
+    font-size: 0.8rem;
+    min-width: 70px !important;    
+
+    }
+    .postTime p{
+        padding: 2px;
+    }
+    .myadsPostDetail{
+        margin: 0px 3px;
+    }
+    .detailArea .imageTitle{
+        margin: 0px 8px 0px 5px !important;
+        font-size: 0.8rem;
+    }
+    .imagePrice{
+        font-size: 0.8rem;
+        /* margin: 0px !important; */
+    }
+    .detailArea img{
+        width: auto;
+        height: 30px;
+    }
+}

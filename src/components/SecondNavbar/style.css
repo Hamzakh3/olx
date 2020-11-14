@@ -1,0 +1,59 @@
+.miniNavbar{
+    height: 45px;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 2px 0px 6px rgb(177, 177, 177);
+}
+.miniNavbar h4{
+    margin-right: 20px;
+    /* position: relative; */
+    cursor: pointer;
+}
+.miniNavItems{
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    gap: 5px;
+    list-style: none;
+    justify-content: center;
+}
+.miniNavItems li{
+    background-color: transparent;
+    border: 1px solid rgb(241, 241, 241);
+    padding: 3px 6px;
+    border-radius: 3px;
+}
+.miniNavItems li:hover{
+cursor: pointer;
+background-color: rgb(241, 241, 241);
+transition: all 0.3s ease-in-out;
+}
+.hideCategories{
+    display: none;
+}
+.allCategories{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    /* min-width: 400px; */
+    min-width: 70%;
+    height: 500px;
+    position: absolute;
+    /* background-image: radial-gradient(circle, rgba(58,119,255,0.1),rgba(255,206,50,0.2), rgba(35,229,219,0.1)); */
+    background-color: rgb(243, 243, 243);
+    top: 115px;
+    opacity: 1;
+    z-index: 1 !important;
+    transition: all 1s ease-in-out;
+    border-radius: 4px;
+}
+.activeAllCat{
+    background-color: rgb(243, 243, 243);
+    padding: 5px 10px;
+    transition: all 0.3s ease-in-out;
+
+}
+
