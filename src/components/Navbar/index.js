@@ -5,7 +5,7 @@ import Logo from '../../assets/images/olx_logo.png'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 // import firebase from '../../assets/config/firebase'
-import { checkAuth, get_userInfo, sign_out } from '../../store/action'
+import { checkAuth, sign_out } from '../../store/action'
 
 class Navbar extends React.Component {
     constructor() {
@@ -42,9 +42,9 @@ class Navbar extends React.Component {
     }
     render() {
 
-        const { clicked, txtSearch, selectLocation, dropUser, notify } = this.state
-        const { isLogedIn, state_ } = this.props
-        const authUid = localStorage.getItem('currentUserId')
+        const { clicked, txtSearch, dropUser, notify } = this.state
+        const { isLogedIn } = this.props
+        // const authUid = localStorage.getItem('currentUserId')
         // firebase.auth().currentUser?firebase.auth().currentUser.uid:''
         // console.log(this.props.userId)
         // this.props.get_userInfo(this.props.userId)

@@ -8,13 +8,13 @@ class Card extends React.Component {
     constructor() {
         super()
         this.state = {
-            heartClick: false
+            // heartClick: false
         }
     }
     render() {
         // this.props.checkAuth()
         // console.log(this.props)
-        let { heartClick } = this.state
+        // let { heartClick } = this.state
         const {data, history, isLogedIn} = this.props
         return (
             <div key={data.postId} className="Card" onClick={()=>

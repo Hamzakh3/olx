@@ -49,8 +49,8 @@ class Chat extends React.Component {
     // }
     render() {
         console.log(this.props.state_)
-        let { ifNoChat, uInfo} = this.state
-        let { userInfo, history, state_, categories } = this.props
+        let { ifNoChat} = this.state
+        let { userInfo, history} = this.props
         // const cList = this.getProductChatList()
         // console.log(cList)
         return (

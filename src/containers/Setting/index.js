@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { checkAuth, get_userInfo, updateUserName, changeUserPass } from '../../store/action'
 import './Style.css'
 import { Link } from 'react-router-dom'
-import Car from '../../assets/images/car.jpg'
 
 
 
@@ -29,7 +28,7 @@ class MyAds extends React.Component {
     render() {
         console.log(this.props.state_)
         const { currentPass, newPass, editMode, changeUName } = this.state
-        const { userInfo, history, userId } = this.props
+        const { userInfo, userId } = this.props
         const ifValid = () => {
             return currentPass === '' || newPass === '' ||
                 newPass.length < 6

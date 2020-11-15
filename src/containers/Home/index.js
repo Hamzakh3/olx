@@ -20,8 +20,8 @@ class Content extends React.Component {
   
     render() {
 
-        let x = []
-        let { categories, userId, state_ } = this.props
+        // let x = []
+        let { categories, userId} = this.props
         
         return (
             <div className="">

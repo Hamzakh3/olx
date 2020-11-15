@@ -9,9 +9,9 @@ import { Link } from 'react-router-dom'
 
 
 class Product extends React.Component {
-    constructor() {
-        super()
-    }
+    // constructor() {
+    //     super()
+    // }
     componentDidMount() {
         this.props.get_userInfo(this.props.userId)
         this.props.checkAuth()
@@ -33,7 +33,7 @@ class Product extends React.Component {
     //     }
     // }
     render() {
-        const { isLogedIn, productId, categories, userInfo, userId } = this.props
+        const { isLogedIn, productId, userId } = this.props
         let getPost = productId ? productId : this.props.history.push('/olx-')
 
         // this.getSelectedPost(categories,productId)
@@ -59,6 +59,7 @@ class Product extends React.Component {
                                                 </li>
                                             )
                                         }
+                                        return console.log()
                                     })}
                                 </ul>
                             </div>

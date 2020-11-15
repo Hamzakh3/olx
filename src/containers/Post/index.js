@@ -76,7 +76,7 @@ class PostForm extends React.Component {
 
     }
     render() {
-        const { category, selectedCategory, showCategories, phoneNumber, selectState,
+        const { category, selectedCategory, showCategories, selectState,
             showNumber, txtName, txtTitle, txtDescription, txtPrice, images, txtReviewName } = this.state
         // console.log(this.state)
         const invalid = selectedCategory === null ||
@@ -211,20 +211,7 @@ class PostForm extends React.Component {
                                                     }
                                                 </ul>
                                             }
-                                            {/* {photos.map((val) => {
-                                                return (
-                                                    <>
-                                                        <div>
-                                                    <input id={`myInput` + val} name={`image` + val} type="file" style={{ visibility: "hidden" }} />
-                                                    <span title="attach file" name={`myInput` + val} className="attachFileSpan" onClick={(e) => 
-                                                        document.getElementById(e.target.parentNode.firstChild.name).click() }>
-                                                        <img src={add_a_photo} alt="icon" width='50px' />
-                                                    </span>
-                                                </div>
-                                                    </>
-                                                )
-                                            })
-                                            } */}
+                                           
                                         </div>
                                         <small className="info"></small>
                                     </div>
@@ -247,7 +234,7 @@ class PostForm extends React.Component {
                                     <div className="reviewDetails">
                                         <h2>REVIEW YOUR DETAILS</h2>
                                         <div className="userReview">
-                                            <img src={add_a_photo_black} alt="photo" width="100px" height="100px" />
+                                            <img src={add_a_photo_black} alt="profile" width="100px" height="100px" />
 
 
                                             <div>

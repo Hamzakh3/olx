@@ -3,7 +3,6 @@ import { connect } from 'react-redux'
 import { get_post, checkAuth, getProductKey, removeAd } from '../../store/action'
 import './Style.css'
 import { Link } from 'react-router-dom'
-import Car from '../../assets/images/car.jpg'
 
 
 
@@ -28,6 +27,7 @@ class MyAds extends React.Component {
                     // console.log(data)
                     adsList.push(data)
                 }
+                return console.log('')
                 //         <h2>There are no Ads you have posted</h2>
             })
             return adsList
@@ -40,12 +40,12 @@ class MyAds extends React.Component {
         }
     }
     render() {
-        let { categories, userId, isLogedIn, history } = this.props
+        let { isLogedIn, history } = this.props
         let list = this.getMyAdsList()
 
         console.log(list)
         return (
-            
+        
             <>
                 {isLogedIn ?
                     <div className='myads'>
@@ -61,7 +61,7 @@ class MyAds extends React.Component {
                                             </div>
                                             <div className='myadsPostDetail'>
                                                 <div className='detailArea'>
-                                                    <img src={data.adsImages[0]} width='auto' height='45px' onClick={() => this.props.getProductKey({ data, history })} />
+                                                    <img src={data.adsImages[0]} alt='Product Image' width='auto' height='45px' onClick={() => this.props.getProductKey({ data, history })} />
                                                     <p className='imageTitle' onClick={() => this.props.getProductKey({ data, history })}>{data.name}</p>
                                                     <p className='imagePrice'>{'Rs. ' + data.price}</p>
                                                     <i className='fas fa-times' onClick={() => this.props.removeAd(data, this.props)}></i>

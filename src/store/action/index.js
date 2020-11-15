@@ -144,12 +144,12 @@ const checkAuth = () => {
 
 const create_account = (data, history, pass) => {
     const { txtEmail, txtUserName, txtNumber, userId } = data
-    const userData = {
-        txtEmail,
-        txtUserName,
-        txtNumber,
-        userId
-    }
+    // const userData = {
+    //     txtEmail,
+    //     txtUserName,
+    //     txtNumber,
+    //     userId
+    // }
     return dispatch => {
         // console.log('set_data ==>')
         auth.createUserWithEmailAndPassword(txtEmail, pass).then((snap) => {
@@ -234,6 +234,13 @@ const create_post = (data, postProps) => {
     }
     return (dispatch) => {
         let myPromise = new Promise((resolve, reject) => {
+            let checkImages = () => {
+                if (postData.adsImages.length === data.imagesValues.length) {
+                    // console.log(postData.adsImages.length, data.imagesValues.length)
+                    resolve(postData.adsImages)
+                }
+                
+            }
             for (let i = 0; i < data.imagesValues.length; i++) {
                 storage.ref(`AdsPictures/${postProps.userId}/${data.imagesValues[i].name}`)
                     .put(data.imagesValues[i]).then((url) => {
@@ -247,12 +254,7 @@ const create_post = (data, postProps) => {
                         console.log(e.message)
                     })
             }
-            let checkImages = () => {
-                if (postData.adsImages.length === data.imagesValues.length) {
-                    // console.log(postData.adsImages.length, data.imagesValues.length)
-                    resolve(postData.adsImages)
-                }
-            }
+            
         })
         myPromise.then(() => {
             let postKey = db.ref(`categories`).child(`bikes`).push().key
@@ -321,7 +323,6 @@ const get_post = () => {
 }
 const get_category = () => {
     return (dispatch) => {
-        let category;
         db.ref(`/categories`).on('value', (snap) => {
             let posts = snap.val()
             console.log(posts)
