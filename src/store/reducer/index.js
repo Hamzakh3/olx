@@ -1,9 +1,11 @@
 import reducer from './reducer'
 import {combineReducers} from 'redux'
 
-export default combineReducers({
+let cReducer = () => combineReducers({
     root:reducer
 })
+
+export default cReducer()
 
 
 

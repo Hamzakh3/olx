@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { checkAuth, get_userInfo, updateUserName, changeUserPass } from '../../store/action'
 import './Style.css'
-import { Link } from 'react-router-dom'
+// import { useHistory } from 'react-router-dom'
 
 
 

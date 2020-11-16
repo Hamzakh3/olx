@@ -5,7 +5,7 @@ import other from '../../assets/images/olx_logo.png'
 import geoLocation from '../../assets/images/geoLocation.png'
 import { checkAuth, get_userInfo, startChat } from '../../store/action'
 import { connect } from 'react-redux'
-import { Link } from 'react-router-dom'
+import { createBrowserHistory  } from 'history'
 
 
 class Product extends React.Component {
@@ -34,7 +34,8 @@ class Product extends React.Component {
     // }
     render() {
         const { isLogedIn, productId, userId } = this.props
-        let getPost = productId ? productId : this.props.history.push('/olx-')
+        let history = createBrowserHistory ()
+        let getPost = productId ? productId : history.push('/olx-')
 
         // this.getSelectedPost(categories,productId)
         // this.getSelectedPost(categories, productId.postId)

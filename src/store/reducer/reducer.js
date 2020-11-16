@@ -5,7 +5,7 @@ const INITIAL_STATE = {
 
 }
 // console.log(firebase.auth().currentUser)
-export default (state = INITIAL_STATE, action) => {
+const reducer = (state = INITIAL_STATE, action) => {
     // console.log('==>', action)
     switch (action.type) {
         case 'create_account':
@@ -62,11 +62,12 @@ export default (state = INITIAL_STATE, action) => {
                 ...state,
                 chatData: action.payload
             })
-        default:
-            return state
+        
 
 
     }
-    // return state
+    return state
 
 } 
+
+export default reducer

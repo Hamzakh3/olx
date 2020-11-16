@@ -2,7 +2,8 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { get_post, checkAuth, getProductKey, removeAd } from '../../store/action'
 import './Style.css'
-import { Link } from 'react-router-dom'
+import { createBrowserHistory  } from 'history'
+
 
 
 
@@ -40,10 +41,11 @@ class MyAds extends React.Component {
         }
     }
     render() {
-        let { isLogedIn, history } = this.props
+        let { isLogedIn } = this.props
+        let history = createBrowserHistory ()
         let list = this.getMyAdsList()
 
-        console.log(list)
+        console.log(history, this.props)
         return (
         
             <>
@@ -61,7 +63,7 @@ class MyAds extends React.Component {
                                             </div>
                                             <div className='myadsPostDetail'>
                                                 <div className='detailArea'>
-                                                    <img src={data.adsImages[0]} alt='Product Image' width='auto' height='45px' onClick={() => this.props.getProductKey({ data, history })} />
+                                                    <img src={data.adsImages[0]} alt='Product_Image' width='auto' height='45px' onClick={() => this.props.getProductKey({ data, history })} />
                                                     <p className='imageTitle' onClick={() => this.props.getProductKey({ data, history })}>{data.name}</p>
                                                     <p className='imagePrice'>{'Rs. ' + data.price}</p>
                                                     <i className='fas fa-times' onClick={() => this.props.removeAd(data, this.props)}></i>

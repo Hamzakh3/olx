@@ -37,6 +37,7 @@ class Content extends React.Component {
                                     if(val.postOwner !== userId){
                                         return <Card data={val} isLogedIn={this.props.isLogedIn} history={this.props.history} />  
                                     }
+                                    return(console.log())
                                 })
                                 : console.log('data nai hay')
 

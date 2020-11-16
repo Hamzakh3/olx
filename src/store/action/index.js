@@ -5,7 +5,7 @@ import Swal from 'sweetalert2'
 
 const auth = firebase.auth()
 const db = firebase.database()
-const storage = firebase.storage()
+// const storage = firebase.storage()   
 
 const swalFunc = async (selectedPost, history) => {
     const SwalA = require('sweetalert2')
@@ -143,7 +143,7 @@ const checkAuth = () => {
 }
 
 const create_account = (data, history, pass) => {
-    const { txtEmail, txtUserName, txtNumber, userId } = data
+    const { txtEmail} = data
     // const userData = {
     //     txtEmail,
     //     txtUserName,
@@ -242,7 +242,7 @@ const create_post = (data, postProps) => {
                 
             }
             for (let i = 0; i < data.imagesValues.length; i++) {
-                storage.ref(`AdsPictures/${postProps.userId}/${data.imagesValues[i].name}`)
+                firebase.storage().ref(`AdsPictures/${postProps.userId}/${data.imagesValues[i].name}`)
                     .put(data.imagesValues[i]).then((url) => {
                         url.ref.getDownloadURL()
                             .then((urlRef) => {

@@ -5,7 +5,9 @@ import photo from '../../assets/images/add_a_photo-24px.svg'
 import chatIcon from '../../assets/images/chatIcon.png'
 import { connect } from 'react-redux'
 import { getChatList } from '../../store/action'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
+import { createBrowserHistory  } from "history";
+// import {createBrowserHistory} from 'react-router-dom'
 
 
 // import { connect } from 'react-redux'
@@ -50,7 +52,8 @@ class Chat extends React.Component {
     render() {
         console.log(this.props.state_)
         let { ifNoChat} = this.state
-        let { userInfo, history} = this.props
+        let { userInfo} = this.props
+        let history = createBrowserHistory ()
         // const cList = this.getProductChatList()
         // console.log(cList)
         return (
