@@ -62,11 +62,15 @@ const reducer = (state = INITIAL_STATE, action) => {
                 ...state,
                 chatData: action.payload
             })
-        
+        default:
+            return({
+                ...state
+            })
+
 
 
     }
-    return state
+    // return state
 
 } 
 
