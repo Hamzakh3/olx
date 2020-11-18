@@ -34,8 +34,8 @@ class Product extends React.Component {
     // }
     render() {
         const { isLogedIn, productId, userId } = this.props
-        let history = createBrowserHistory ()
-        let getPost = productId ? productId : history.push('/olx-')
+        createBrowserHistory ()
+        let getPost = productId ? productId : this.props.history.push('/olx-')
 
         // this.getSelectedPost(categories,productId)
         // this.getSelectedPost(categories, productId.postId)

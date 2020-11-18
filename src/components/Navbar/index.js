@@ -29,13 +29,13 @@ class Navbar extends React.Component {
             [e.target.name]: e.target.value
         })
     }
-    gotoSetting= ()=>{
+    gotoSetting = () => {
         this.props.history.push('/olx-/setting')
-        this.setState({dropUser:false})
+        this.setState({ dropUser: false })
     }
-    gotoMyAds= ()=>{
+    gotoMyAds = () => {
         this.props.history.push('/olx-/my-ads')
-        this.setState({dropUser:false})
+        this.setState({ dropUser: false })
     }
     componentDidMount() {
         this.props.checkAuth()
@@ -53,7 +53,14 @@ class Navbar extends React.Component {
             <>
                 <div>
                     <nav className="navbar">
-                        <span className="logo">
+                        <span className="logo" 
+                        onClick={()=>{
+                            this.setState({
+                                clicked:false,
+                                dropUser:false,
+                                notify:false
+                            })
+                        }}>
                             <Link to='/olx-'>
                                 <img className="olxLogo" src={Logo} alt="olx" width='45px' />
                             </Link>
@@ -63,8 +70,8 @@ class Navbar extends React.Component {
                         </div>
                         <ul className={clicked ? 'menuItems active' : 'menuItems'}>
                             <li className="location">
-                                <select value='selectLocation' name='selectLocation' onChange={(e) => { this.handleChangeValue(e) }}>
-                                    <option value='pakistan'>Pakistan</option>
+                                <select name='selectLocation' onChange={(e) => { this.handleChangeValue(e) }}>
+                                    <option selected value='pakistan'>Pakistan</option>
                                     <option value='sindh'>Sindh</option>
                                     <option value='punjab'>Punjab</option>
                                     <option value='balochistan'>Balochistan</option>
@@ -72,41 +79,87 @@ class Navbar extends React.Component {
                                     <option value='gilgitbaldistan'>Gilgit Baldistan</option>
                                 </select>
                             </li>
-                            <li className="search">
-                                <input type="search" name='txtSearch' placeholder="Find Cars, Mobile Phones and more..." onChange={(e) => { this.handleChangeValue(e) }} value={txtSearch} /><button className='fas fa-search'></button>
+                            <li className="searchingArea">
+                                <input type="search" name='txtSearch' placeholder="Find Cars, Mobile Phones and more..." onChange={(e) => {
+                                    this.handleChangeValue(e)
+                                }} value={txtSearch} />
+                                <button className='fas fa-search'></button>
                             </li>
                             {isLogedIn ?
                                 <>
-                                    <li className="chatIcon navIcon" onClick={()=>this.props.history.push('/olx-/chat')}>
-                                        <i className='fas fa-comment'></i>
-                                    </li>
-                                    <li className="notificationIcon navIcon">
-                                        {/* <Link to='/olx-/setting'> */}
-                                            <i className='fas fa-bell' onClick={()=>{this.setState({dropUser:false, notify: !notify})}}></i>
-                                            <div className={notify? 'notification notificationCall': 'notification'} >
-                                                <ul className='dropUserColumn'>
-                                                    <li>No New Notification</li>
-                                                </ul>
-                                            </div>
-                                        {/* </Link> */}
-                                    </li>
-                                    <li className="userIcon navIcon">
-                                        {/* <Link to='/olx-/setting'> */}
-                                        <span onClick={() => { this.setState({ dropUser: !dropUser, notify: false }) }}>
-                                            <i className='fas fa-user'></i>
-                                            <i className='fas fa-angle-down'></i>
-                                        </span>
-                                        <div className={dropUser ? 'dropUser dropUserCall' : 'dropUser'}>
-                                            <ul className='dropUserColumn'>
-                                                <li onClick={()=>this.gotoMyAds()}><i className='far fa-newspaper'></i>My Ads</li>
-                                                <hr />
-                                                <li onClick={()=>this.gotoSetting()}><i className='fas fa-sliders-h'></i> Setting</li>
-                                                <hr />
-                                                <li onClick={()=>this.props.sign_out(this.props.history)}> <i className='fas fa-sign-out-alt'></i>Logout</li>
-                                            </ul>
-                                        </div>
+                                    <li>
+                                        <ul className='navIconParent'>
+                                            <li className="chatIcon navIcon"
+                                                onClick={() => {
+                                                    this.props.history.push('/olx-/chat');
+                                                    this.setState({
+                                                        dropUser: false,
+                                                        notify: false,
+                                                        clicked: false
+                                                    })
+                                                }}>
+                                                <i className='fas fa-comment'></i>
+                                            </li>
+                                            <li className="notificationIcon navIcon">
+                                                {/* <Link to='/olx-/setting'> */}
 
-                                        {/* </Link> */}
+                                                <i className='fas fa-bell' onClick={() => { this.setState({ dropUser: false, notify: !notify }) }}></i>
+                                                <div onMouseLeave={()=>{this.setState({notify:false})}} className={notify ? 'notification notificationCall' : 'notification'} >
+                                                    <ul className='dropUserColumn'>
+                                                        <li>No New Notification</li>
+                                                    </ul>
+                                                </div>
+                                                {/* </Link> */}
+                                            </li>
+                                            <li className="userIcon navIcon">
+                                                {/* <Link to='/olx-/setting'> */}
+                                                {/*   */}
+                                                <span onClick={() => { this.setState({ dropUser: !dropUser, notify: false }) }}>
+                                                    <i className='fas fa-user'></i>
+                                                    {/* <i className={dropUser ? 'fas fa-angle-up' : 'fas fa-angle-down'}></i> */}
+                                                </span>
+                                                <div onMouseLeave={()=>{this.setState({dropUser:false})}} className={dropUser ? 'dropUser dropUserCall' : 'dropUser'}>
+                                                    <ul className='dropUserColumn'>
+                                                        <li
+                                                            onClick={() => {
+                                                                this.gotoMyAds()
+                                                                this.setState({
+                                                                    dropUser: false,
+                                                                    notify: false,
+                                                                    clicked: false
+                                                                })
+                                                            }}>
+                                                            <i className='far fa-newspaper'></i>My Ads
+                                                        </li>
+                                                        <hr />
+                                                        <li
+                                                            onClick={() => {
+                                                                this.gotoSetting()
+                                                                this.setState({
+                                                                    dropUser: false,
+                                                                    notify: false,
+                                                                    clicked: false
+                                                                })
+                                                            }}>
+                                                            <i className='fas fa-sliders-h'></i> Setting
+                                                        </li>
+                                                        <hr />
+                                                        <li
+                                                            onClick={() => {
+                                                                this.props.sign_out(this.props.history);
+                                                                this.setState({
+                                                                    dropUser: false,
+                                                                    notify: false,
+                                                                    clicked: false
+                                                                })
+                                                            }}> <i className='fas fa-sign-out-alt'></i>Logout
+                                                        </li>
+                                                    </ul>
+                                                </div>
+
+                                                {/* </Link> */}
+                                            </li>
+                                        </ul>
                                     </li>
                                 </> : <>
                                     < li className="login" >
@@ -114,7 +167,14 @@ class Navbar extends React.Component {
                                     </li >
                                 </>}
 
-                            <li className="sell">
+                            <li className="sell"
+                                onClick={()=>{
+                                    this.setState({
+                                        dropUser: false,
+                                        notify: false,
+                                        clicked: false
+                                    })
+                                }}>
                                 <Link to='/olx-/post'>
                                     <button><i className="fas fa-plus"></i> Sell</button>
                                 </Link>
@@ -122,7 +182,7 @@ class Navbar extends React.Component {
 
                         </ul>
                     </nav>
-                    <SecondNavbar />
+                    {/* <SecondNavbar /> */}
                 </div>
             </>
 

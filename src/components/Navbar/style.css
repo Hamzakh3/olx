@@ -11,7 +11,8 @@
     /* margin: 0px !important; */
     cursor: pointer;
     align-self: center;
-    margin: 0px 10px;
+    justify-self: flex-start;
+    margin: 0px 10px 0px 0px;
 
 }
 
@@ -45,8 +46,46 @@
     font-size: 20px;
     border-radius: 4px;
     min-width: 13vw;
+    outline: none !important;
 }
+.searchingArea{
+    display: flex;
+    justify-content: center;
+    height: 40px;
+    margin: 0px 6px 0px 6px !important;
+    border-radius: 4px;
+    padding: 2px;
+    background-color: rgb(0, 47, 42);
 
+    /* margin-top: auto !important;
+    margin-bottom: 5px !important; */
+}
+.searchingArea input{
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    padding-left:10px;
+    /* cursor: pointer; */
+    color: rgb(0, 46, 47);
+    font-size: 17px;
+    background-color: white;
+    width: 26vw;
+
+}
+.searchingArea button:hover{
+    background-color: white;
+    color: rgb(0, 47, 42);
+    transition: all 0.1s ease-in-out;
+}
+.searchingArea button{
+    /* flex-grow: 1; */
+    border:none;
+    outline: none;
+    cursor: pointer;
+    color: white;
+    background-color: transparent;
+    padding: 0px 14px;
+}
 .search input {
     align-self: center;
     color: rgb(0, 47, 42);
@@ -91,6 +130,22 @@
     border-left: none;
     border-radius: 0px 4px 4px 0px;
 }
+.navIconParent{
+    width: auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+    padding: 0px;
+    list-style-type: none;
+}
+.navIconParent .navIcon{
+    flex-grow: 1;
+    background-color: none;
+    border: none;
+    border-radius: 0px !important;
+    margin: 0px 2px;
+}
 .login{
     font-size: 18px;
     align-self: center;
@@ -133,7 +188,7 @@
     box-shadow: 2px 2px 7px rgb(196, 196, 196);
     border-radius: 0px 4px 4px 4px;
     top: -150px;
-    right: 0;
+    right: 40px;
     color: rgb(83, 83, 83);
     z-index: 1;
     transition: all 0.1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
@@ -186,7 +241,7 @@
 }
 
 
-@media screen and (max-width:870px) {
+@media screen and (max-width:830px) {
     .navbar {
         position: relative;
     }
@@ -200,7 +255,7 @@
         width: 80% !important;
         height: 280px;
         position: absolute;
-        top: 50px;
+        top: 49px;
         left: -100%;
         opacity: 1;
         transition: all 0.3s ease;
@@ -236,13 +291,13 @@
         cursor: pointer;
     }
     .location select{
-        width: 80%;
+        width: 95vw !important;
     }
-    .search input{
-        width: 60%;
-    }
+    /* .searchingArea input{
+        width: 50% !important;
+    } */
     .sell button{
-        width: 60%;
+        width: 40%;
     }
     .login{
         background-color: rgb(255,206,50);
@@ -256,4 +311,72 @@
         border: 2px solid rgb(255,206,50);
         color: rgb(255,206,50);
     }
+    .navIconParent{
+        width: 100%;
+        display: flex;
+        justify-content: center !important;
+        align-items: center;
+        flex-direction: row;
+        padding: 0px;
+        list-style-type: none;
+    }
+    .navIconParent .navIcon .fa-bell,
+    .navIconParent .navIcon .fa-comment,
+    .navIconParent .navIcon span{
+        flex-grow: none !important;
+        padding: 8px 20px;
+        background-color: whitesmoke;
+        border: 1px solid rgb(0, 47, 42);
+        border-radius: 2px !important;
+        margin: 0px 5px;
+    }
+    .navIconParent .navIcon .fa-bell:hover,
+    .navIconParent .navIcon .fa-comment:hover,
+    .navIconParent .navIcon span:hover{
+        flex-grow: 1;
+        padding: 8px 20px;
+        background-color: whitesmoke;
+        border: 1px solid rgb(0, 47, 42);
+        border-radius: 2px !important;
+        margin: 0px 5px;
+    }
+    .notification{
+        position: absolute;
+        width: 200px;
+        height: auto;
+        /* border: 1px solid black; */
+        background-color: white;
+        box-shadow: 2px 2px 7px rgb(196, 196, 196);
+        border-radius: 0px 4px 4px 4px;
+        top: -255px;
+        /* bottom: -30px; */
+        right: -25px;
+        color: rgb(83, 83, 83);
+        z-index: 0 !important;
+        transition: all 0.1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    }
+    .notificationCall{
+        top: 39px !important;
+        right: -25px !important;
+    }
+    .dropUser{
+        position: absolute;
+        width: 200px;
+        height: auto;
+        /* border: 1px solid black; */
+        background-color: white;
+        box-shadow: 2px 2px 7px rgb(196, 196, 196);
+        border-radius: 0px 4px 4px 4px;
+        top: -347px;
+        right: 40px;
+        color: rgb(83, 83, 83);
+        z-index: 0 !important;
+        transition: all 0.1s cubic-bezier(0.95, 0.05, 0.795, 0.035);
+    }
+    .dropUserCall{
+        top: 30px !important;
+        right: 0px !important;
+    
+    }
+    
 }

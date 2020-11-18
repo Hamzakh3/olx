@@ -11,3 +11,10 @@
     flex-wrap: wrap;
     flex-shrink: 4;
 }
+.ifNoPost{
+    color: rgb(0,42,46);
+    background-color: rgb(185, 250, 255);
+    padding:10px 20px;
+    border-radius: 5px;
+    text-align: center;
+}

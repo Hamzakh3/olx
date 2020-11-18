@@ -19,8 +19,8 @@ class MyAds extends React.Component {
         this.props.checkAuth()
     }
     getMyAdsList() {
+        // await this.props.get_post()
         let { categories, userId} = this.props
-
         let adsList = []
         if (this.props.categories) {
             categories.map((data) => {
@@ -28,24 +28,27 @@ class MyAds extends React.Component {
                     // console.log(data)
                     adsList.push(data)
                 }
-                return console.log('')
-                //         <h2>There are no Ads you have posted</h2>
+                // return console.log('')
             })
-            return adsList
-            // this.setState({list: adsList})
+            if(adsList.length > 0){
+                return adsList
+            }
+            else{
+                return 'noAds'
+            }
         }
-        else {
+        else{
             console.log('Error')
             return false
-            // this.setState({list: false})
         }
     }
+
     render() {
-        let { isLogedIn } = this.props
-        let history = createBrowserHistory ()
+        let { isLogedIn, history, categories } = this.props
+        createBrowserHistory ()
         let list = this.getMyAdsList()
 
-        console.log(history, this.props)
+        // console.log(history, this.props)
         return (
         
             <>
@@ -54,7 +57,7 @@ class MyAds extends React.Component {
                         <div>
                             <h3>My Ads</h3>
 
-                            {list.length > 0 ?
+                            {list !== 'noAds' && list !== false?
                                 list.map((data) => {
                                     return (
                                         <div className='myadsList' key={data.postId}>
@@ -78,13 +81,19 @@ class MyAds extends React.Component {
                                             </div>
                                         </div>
                                     )
-                                }) : <h2>There is no Ads you have posted</h2>
+                                }): list === 'noAds' ? 
+                                    <h2>There is no Ads you have posted</h2>:
+                                    history.push('/olx-')
+
+                                
+                            
+                                
                             }
 
                         </div>
 
 
-                    </div> : history.push('/olx-')
+                    </div> : console.log('HAMZA')
 
                 }
             </>

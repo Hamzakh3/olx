@@ -22,6 +22,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     border-radius: 5px;
     margin: 20px 0px;   
 }
@@ -97,6 +98,7 @@
     font-size: 1.2rem;
     /* margin-left: 20px; */
     padding:5px 8px;
+    max-width: 160px;
     color: rgb(0,42,46);
     /* font-weight: 600; */
 }
@@ -112,7 +114,7 @@
     background-color: white;
     border: 1px solid rgb(0,42,46);
     cursor: pointer;
-    padding: 7px 10px;
+    padding: 7px 10px !important;
     /* margin: 0px 3px 0px auto; */
     border-radius: 3px;
 
@@ -148,6 +150,19 @@
     color: rgb(34, 64, 66) !important;
     cursor: not-allowed !important;
     font-weight: 100 !important;
+    /* margin: 0px 0px 0px auto; */
+}
+.editModeButton{
+    display: flex;
+    justify-content: flex-end;
+    /* width: 90vw !important; */
+    margin: 0px 3px 0px auto !important;
+    align-items: center;
+}
+.userInfoArea{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 /* .topEndAlert{
     width: 100px !important;
@@ -163,6 +178,19 @@
         width: 65px;
         height: 65px;
         border-radius: 100%;
+    }
+    .settingUserProfile{
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+        height: auto !important;
+    }
+    .editModeButton{
+        display: flex;
+        justify-content: flex-end;
+        width: 90vw !important;
+        align-items: center;
     }
     
 }

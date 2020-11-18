@@ -22,6 +22,8 @@ class AppRouter extends React.Component {
             <Router>
                 <Route path='/olx-' component={Navbar} />
                 <Route exact path='/olx-' component={Home}/>
+                <Route exact path='/' component={Navbar}/>
+                <Route exact path='/' component={Home}/>
                 <Route exact path='/login' component={Login}/>
                 <Route exact path='/create-account' component={SignUp}/>
                 <Route exact path='/olx-/post' component={Post}/>
