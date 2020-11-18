@@ -28,7 +28,7 @@ class MyAds extends React.Component {
                     // console.log(data)
                     adsList.push(data)
                 }
-                // return console.log('')
+                return console.log('')
             })
             if(adsList.length > 0){
                 return adsList
@@ -44,7 +44,7 @@ class MyAds extends React.Component {
     }
 
     render() {
-        let { isLogedIn, history, categories } = this.props
+        let { isLogedIn, history } = this.props
         createBrowserHistory ()
         let list = this.getMyAdsList()
 

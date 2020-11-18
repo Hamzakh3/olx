@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.css'
-import SecondNavbar from '../SecondNavbar'
+// import SecondNavbar from '../SecondNavbar'
 import Logo from '../../assets/images/olx_logo.png'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
